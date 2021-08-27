@@ -20,6 +20,9 @@ import { CreateFdComponent } from './create-fd/create-fd.component';
 import { MatSelectModule } from '@angular/material/select';
 import { PayBillComponent } from './pay-bill/pay-bill.component';
 import { service } from './service';
+import { LoginComponent } from './login/login.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import { service } from './service';
     AccountComponent,
     CreateFdComponent,
     PayBillComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { service } from './service';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule, MatGridListModule, MatButtonModule, MatTooltipModule, MatTableModule, MatFormFieldModule, MatSelectModule
+    MatCardModule, MatGridListModule, MatButtonModule, MatTooltipModule, MatTableModule,
+     MatFormFieldModule, MatSelectModule,MatInputModule, FormsModule, ReactiveFormsModule
   ],
   providers: [service],
   bootstrap: [AppComponent]

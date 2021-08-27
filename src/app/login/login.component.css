@@ -1,0 +1,43 @@
+.login-wrapper .login-full-width {
+  width: 100%;
+}
+
+.login-wrapper {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+.dice-userName {
+  letter-spacing: 1px;
+  font-size: 1.3em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.login-wrapper .login-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+
+mat-card {
+  border-radius: 10px;
+  margin-top: 10em;
+  width: 30em;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card-title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  margin: 16px;
+}
