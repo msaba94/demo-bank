@@ -1,0 +1,64 @@
+.example-card {
+  background-color: #1a237e;
+  margin-left: 54px;
+  margin-right: 54px;
+}
+
+.toolbar-card {
+  background-color: #000051;
+}
+
+.primary-text {
+  color: #fff;
+}
+
+.selection-card {
+  color: #3949ab;
+}
+
+.example-button-left {
+  justify-content: center;
+  width: 120px;
+  position: absolute;
+  left: 0;
+}
+
+.example-button-center {
+  justify-content: center;
+  width: 120px;
+  align-self: center;
+  position: absolute;
+}
+
+.example-button-right {
+  justify-content: center;
+  width: 120px;
+  position: absolute;
+  right: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.amount-text {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  font-size: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: max-content;
+  margin-top: 32px;
+}
+
+.menu-btn {
+  height: 75px;
+  width: 200px;
+  margin-left: 16;
+  margin-right: 16;
+}
