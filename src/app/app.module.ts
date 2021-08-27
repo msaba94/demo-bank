@@ -19,6 +19,7 @@ import { AccountComponent } from './account/account.component';
 import { CreateFdComponent } from './create-fd/create-fd.component';
 import { MatSelectModule } from '@angular/material/select';
 import { PayBillComponent } from './pay-bill/pay-bill.component';
+import { service } from './service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { PayBillComponent } from './pay-bill/pay-bill.component';
     MatIconModule,
     MatCardModule, MatGridListModule, MatButtonModule, MatTooltipModule, MatTableModule, MatFormFieldModule, MatSelectModule
   ],
-  providers: [],
+  providers: [service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

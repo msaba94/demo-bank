@@ -4,35 +4,74 @@
   <p>
     <mat-card class="example-card">
       <span class="holder-name">Rathina Sabapathi</span>
+      <span class="amount-text">$ 34,403.25</span>
+      <br />
       <span class="primary-text" style="margin-top: 8">
         1002345678 (Savings A/C)
       </span>
-      <span class="amount-text">$ 34,403.25</span>
+
+      <!-- FAB Icon -->
+      <div class="example-button-right">
+        <button
+          mat-fab
+          style="color: #e91e63; position: right"
+          matTooltip="Create FD"
+          (click)="openCreateFD()"
+        >
+          <mat-icon style="color: #fff">add</mat-icon>
+        </button>
+      </div>
     </mat-card>
   </p>
 
-  <!-- FAB Icon -->
-  <div class="example-button-right">
-    <button mat-fab style="color: #e91e63" matTooltip="Create FD" (click)="openCreateFD()">
-      <mat-icon style="color: #fff">add</mat-icon>
-    </button>
-  </div>
-
-
-  <div style="margin-top: 48px; padding-left: 56px; padding-right: 56px">
-    <button mat-raised-button (click)="openAccount()" class="menu-btn" style="margin: 8px;">
+  <div
+    class="row"
+    style="margin-top: 48px; padding-left: 56px; padding-right: 56px"
+  >
+    <button
+      mat-raised-button
+      (click)="openAccount()"
+      class="menu-btn"
+      style="margin: 8px"
+    >
       Account
     </button>
-    <button mat-raised-button (click)="openStatement()" class="menu-btn" style="margin: 8px;">
+    <button
+      mat-raised-button
+      (click)="openStatement()"
+      class="menu-btn"
+      style="margin: 8px"
+    >
       Statement
     </button>
-    <button mat-raised-button (click)="openPayBill()" class="menu-btn" style="margin: 8px;">Pay Bill</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">Loans</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">Deposits</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">My Finances</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">Insurance</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">My Investments</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">Cheque Book</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">Refer Now</button>
+    <button
+      mat-raised-button
+      (click)="openPayBill()"
+      class="menu-btn"
+      style="margin: 8px"
+    >
+      Pay Bill
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      Loans
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      Deposits
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      My Finances
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      Insurance
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      My Investments
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      Cheque Book
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px">
+      Refer Now
+    </button>
   </div>
 </div>
