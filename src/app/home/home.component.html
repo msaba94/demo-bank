@@ -1,12 +1,5 @@
+<app-header></app-header>
 <div>
-  <!-- Toolbar -->
-  <p>
-    <mat-toolbar class="toolbar-card">
-      <img src="assets/zoho_logo.png" style="width: 5%" />
-      <span class="primary-text" style="margin-left: 8px">Bank</span>
-    </mat-toolbar>
-  </p>
-
   <!-- Info Card View -->
   <p>
     <mat-card class="example-card">
@@ -37,14 +30,19 @@
     </mat-card>
   </p>
   <div style="margin-top: 48px; padding-left: 56px; padding-right: 56px">
-    <button mat-raised-button (click)="openStatement()" class="menu-btn">Statement</button>
-    <button mat-raised-button class="menu-btn">Loans</button>
-    <button mat-raised-button class="menu-btn">Pay Bill</button>
-    <button mat-raised-button class="menu-btn">Deposits</button>
-    <button mat-raised-button class="menu-btn">My Finances</button>
-    <button mat-raised-button class="menu-btn">Insurance</button>
-    <button mat-raised-button class="menu-btn">My Investments</button>
-    <button mat-raised-button class="menu-btn">Cheque Book Management</button>
-    <button mat-raised-button class="menu-btn">Refer Now</button>
+    <button mat-raised-button (click)="openAccount()" class="menu-btn" style="margin: 8px;">
+      Account
+    </button>
+    <button mat-raised-button (click)="openStatement()" class="menu-btn" style="margin: 8px;">
+      Statement
+    </button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">Loans</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">Pay Bill</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">Deposits</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">My Finances</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">Insurance</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">My Investments</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">Cheque Book</button>
+    <button mat-raised-button class="menu-btn" style="margin: 8px;">Refer Now</button>
   </div>
 </div>

@@ -17,11 +17,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-  selector: 'app-statement',
-  templateUrl: './statement.component.html',
-  styleUrls: ['./statement.component.css']
+  selector: 'app-account',
+  templateUrl: './account.component.html',
+  styleUrls: ['./account.component.css']
 })
-export class StatementComponent implements OnInit {
+export class AccountComponent implements OnInit {
 
   displayedColumns: string[] = ['bankName', 'accountType', 'balance', 'location'];
   dataSource = ELEMENT_DATA;

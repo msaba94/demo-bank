@@ -13,3 +13,7 @@ body {
   /*font-size: 30px !important;*/
   float: right !important;
 }
+
+.primary-text {
+  color: #fff;
+}
