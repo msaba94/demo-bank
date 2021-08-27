@@ -2,6 +2,7 @@
   background-color: #1a237e;
   margin-left: 54px;
   margin-right: 54px;
+  min-height: 40px;
 }
 
 .toolbar-card {
@@ -10,24 +11,11 @@
 
 .primary-text {
   color: #fff;
+  width: auto;
 }
 
 .selection-card {
   color: #3949ab;
-}
-
-.example-button-left {
-  justify-content: center;
-  width: 120px;
-  position: absolute;
-  left: 0;
-}
-
-.example-button-center {
-  justify-content: center;
-  width: 120px;
-  align-self: center;
-  position: absolute;
 }
 
 .example-button-right {
@@ -46,8 +34,10 @@
   right: 0;
   color: #fff;
   font-size: 32px;
-  justify-content: center;
-  align-items: center;
+  margin-right: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  width: auto;
 }
 
 .example-button-row {
@@ -60,4 +50,10 @@
   height: 75px;
   width: 200px;
   font-size: 16px;
+}
+
+.holder-name{
+  width: auto;
+  color: #fff;
+  font-size: 22px;
 }

@@ -3,32 +3,22 @@
   <!-- Info Card View -->
   <p>
     <mat-card class="example-card">
-      <mat-card-title class="primary-text">Rathina Sabapathi</mat-card-title>
-      <mat-card-subtitle class="primary-text" style="margin-top: 8">
+      <span class="holder-name">Rathina Sabapathi</span>
+      <span class="primary-text" style="margin-top: 8">
         1002345678 (Savings A/C)
-      </mat-card-subtitle>
-      <span class="amount-text">$ 100,000</span>
-
-      <!-- FAB Icon -->
-      <div layout="column">
-        <div class="example-button-left">
-          <button mat-fab style="color: #e91e63" matTooltip="Sent Mony">
-            <mat-icon style="color: #fff">attach_money</mat-icon>
-          </button>
-        </div>
-        <div class="example-button-center">
-          <button mat-fab style="color: #e91e63" matTooltip="Create FD" (click)="openCreateFD()">
-            <mat-icon style="color: #fff">add</mat-icon>
-          </button>
-        </div>
-        <div class="example-button-right">
-          <button mat-fab style="color: #e91e63" matTooltip="Add Funds">
-            <mat-icon style="color: #fff">loop</mat-icon>
-          </button>
-        </div>
-      </div>
+      </span>
+      <span class="amount-text">$ 34,403.25</span>
     </mat-card>
   </p>
+
+  <!-- FAB Icon -->
+  <div class="example-button-right">
+    <button mat-fab style="color: #e91e63" matTooltip="Create FD" (click)="openCreateFD()">
+      <mat-icon style="color: #fff">add</mat-icon>
+    </button>
+  </div>
+
+
   <div style="margin-top: 48px; padding-left: 56px; padding-right: 56px">
     <button mat-raised-button (click)="openAccount()" class="menu-btn" style="margin: 8px;">
       Account
