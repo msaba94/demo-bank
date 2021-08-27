@@ -17,7 +17,7 @@
           </button>
         </div>
         <div class="example-button-center">
-          <button mat-fab style="color: #e91e63" matTooltip="Create FD">
+          <button mat-fab style="color: #e91e63" matTooltip="Create FD" (click)="openCreateFD()">
             <mat-icon style="color: #fff">add</mat-icon>
           </button>
         </div>
@@ -36,8 +36,8 @@
     <button mat-raised-button (click)="openStatement()" class="menu-btn" style="margin: 8px;">
       Statement
     </button>
+    <button mat-raised-button (click)="openPayBill()" class="menu-btn" style="margin: 8px;">Pay Bill</button>
     <button mat-raised-button class="menu-btn" style="margin: 8px;">Loans</button>
-    <button mat-raised-button class="menu-btn" style="margin: 8px;">Pay Bill</button>
     <button mat-raised-button class="menu-btn" style="margin: 8px;">Deposits</button>
     <button mat-raised-button class="menu-btn" style="margin: 8px;">My Finances</button>
     <button mat-raised-button class="menu-btn" style="margin: 8px;">Insurance</button>

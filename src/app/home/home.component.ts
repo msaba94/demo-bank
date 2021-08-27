@@ -21,4 +21,11 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/statement']);
   }
 
+  openCreateFD() {
+    this.router.navigate(['/create-fd']);
+  }
+
+  openPayBill() {
+    this.router.navigate(['/pay-bill']);
+  }
 }

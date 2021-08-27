@@ -16,6 +16,9 @@ import { HeaderComponent } from './header/header.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AccountComponent } from './account/account.component';
+import { CreateFdComponent } from './create-fd/create-fd.component';
+import { MatSelectModule } from '@angular/material/select';
+import { PayBillComponent } from './pay-bill/pay-bill.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { AccountComponent } from './account/account.component';
     StatementComponent,
     HeaderComponent,
     AccountComponent,
+    CreateFdComponent,
+    PayBillComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import { AccountComponent } from './account/account.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule, MatGridListModule, MatButtonModule, MatTooltipModule, MatTableModule, MatFormFieldModule
+    MatCardModule, MatGridListModule, MatButtonModule, MatTooltipModule, MatTableModule, MatFormFieldModule, MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

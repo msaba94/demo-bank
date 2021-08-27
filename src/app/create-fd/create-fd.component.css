@@ -1,0 +1,22 @@
+.fd-form-card {
+    width: 60%;
+
+}
+
+.navigation-text {
+    color: blue;
+    padding: 16px;
+    font-weight: bold;
+}
+
+.login-wrapper .login-full-width {
+    width: 100%;
+  }
+  
+  .login-wrapper{
+    flex-direction: row;
+      box-sizing: border-box;
+      display: flex;
+      place-content: center;
+      align-items: center;   
+  }
