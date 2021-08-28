@@ -16,6 +16,8 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource = this.service.getAccountDetails();
+    console.log(this.dataSource );
+    
   }
 
 }

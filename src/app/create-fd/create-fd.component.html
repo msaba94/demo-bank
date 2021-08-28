@@ -1,19 +1,18 @@
 <app-header></app-header>
 
 <a [routerLink]="['/account']">
-    <span class=" navigation-text">Home</span>
+  <span class="navigation-text">Home</span>
 </a>
-<div class="login-wrapper" style="margin-top:24px">
-
-    <mat-card class="fd-form-card">
-        <h4>Create Fixed Deposit</h4>
-        <mat-form-field appearance="fill">
-            <mat-label>Choose Account</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                    {{food.viewValue}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </mat-card>
+<div class="login-wrapper" style="margin-top: 24px">
+  <mat-card class="fd-form-card">
+    <h4>Create Fixed Deposit</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose Account</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let bank of dataSource" [value]="bank.bankName">
+          {{ bank.bankName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
 </div>

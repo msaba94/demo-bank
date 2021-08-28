@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Food {
-  value: string;
-  viewValue: string;
-}
+import { service } from '../service';
 
 @Component({
   selector: 'app-create-fd',
@@ -12,15 +8,11 @@ interface Food {
 })
 export class CreateFdComponent implements OnInit {
 
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
-  ];
-
-  constructor() { }
+  dataSource :any;
+  constructor(public service: service) { }
 
   ngOnInit(): void {
+    this.dataSource = this.service.getAccountDetails();
   }
 
 }
