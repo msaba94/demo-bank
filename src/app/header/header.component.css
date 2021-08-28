@@ -1,4 +1,9 @@
 .toolbar-card {
-    background-color: #000051;
-  }
-  
+  background-color: #000051;
+}
+
+mat-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 32px !important;
+}

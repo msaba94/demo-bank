@@ -57,7 +57,10 @@ export class LoginComponent implements OnInit {
         password: this.registerForm.value.userPassword,
       }
     }
-    console.log(this.user);
+
+    this.service.register(this.user).then(data => {
+      console.log(data);
+    })
     //this.router.navigate(['/home']);
   }
 }

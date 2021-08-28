@@ -62,6 +62,13 @@ export class service{
         return this.http.post('http://192.168.1.4:8080/bankService/bank/login', user,
           { headers: headers }).toPromise().then(res => res);
       }
+
+      public register(user: any): Promise<any> {
+        const headers = new HttpHeaders();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('http://192.168.1.4:8080/bankService/bank/register', user,
+          { headers: headers }).toPromise().then(res => res);
+      }
 }
 
 
