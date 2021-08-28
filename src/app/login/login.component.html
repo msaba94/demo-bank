@@ -11,6 +11,13 @@
             <mat-form-field appearance="fill">
               <mat-label>Password</mat-label>
               <input matInput type="password" formControlName="userPassword" />
+              <mat-hint style="color: red" *ngIf="IsLogin">{{
+                showLogin
+              }}</mat-hint>
+
+              <mat-hint style="color: red" *ngIf="enterAny"
+                >Enter username and password</mat-hint
+              >
             </mat-form-field>
             <button
               type="button"
@@ -40,13 +47,24 @@
               <input matInput type="password" formControlName="userPassword" />
             </mat-form-field>
             <mat-form-field appearance="fill">
+              <mat-hint style="color: red" *ngIf="IsConfirmPassword"
+                >Confirm Password Not Matched</mat-hint
+              >
               <mat-label>Confirm Password</mat-label>
               <input
                 matInput
                 type="password"
                 formControlName="userConfirmPassword"
+                (click)="checkConfirmPassword()"
               />
+              <mat-hint style="color: blue" *ngIf="IsShowSign"
+                >EmailId Registered Successfully</mat-hint
+              >
+              <mat-hint style="color: red" *ngIf="IsShowSign2">{{
+                showLogin2
+              }}</mat-hint>
             </mat-form-field>
+
             <button
               type="button"
               mat-raised-button
