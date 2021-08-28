@@ -36,10 +36,12 @@ export class LoginComponent implements OnInit {
       emailId: this.myForm.value.userEmail,
       password: this.myForm.value.userPassword,
     }
-    this.service.login(this.user).then((response) => {
-      console.log('Ui', response);
-    })
-    //this.router.navigate(['/home']);
+    this.service.login(this.user).then(data => {
+      console.log(data);
+      if (data.success){
+        this.router.navigate(['/home']);
+      }
+    });
   }
 
   reset() {

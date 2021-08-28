@@ -1,7 +1,11 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+}
+)
 export class service{
+  response: any;
   constructor(public http: HttpClient){
 
   }
@@ -51,12 +55,13 @@ export class service{
       public getStatements() {
           return this.statements;
       }
-      public login(user: any) {
+      
+      public login(user: any) :Promise<any>{
         const headers = new HttpHeaders();
         headers.append('Content-Type', 'application/json');
         return this.http.post('http://192.168.1.4:8080/bankService/bank/login', user,
-        { headers: headers }).toPromise().then((response) => {
-          console.log(response);
-        })
+          { headers: headers }).toPromise().then(res => res);
       }
 }
+
+
