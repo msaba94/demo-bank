@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { service } from '../service';
 
 @Component({
   selector: 'app-login',
@@ -10,22 +11,51 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   myForm!: FormGroup;
-  constructor(public fb: FormBuilder, public router: Router) { }
+  registerForm!: FormGroup;
+  user: any
+
+  constructor(public fb: FormBuilder, public router: Router, public service: service) { }
 
   ngOnInit(): void {
     this.myForm = this.fb.group({
       userEmail: ['', Validators.required],
       userPassword: ['', Validators.required]
     });
+
+    this.registerForm = this.fb.group({
+      userEmail: ['', Validators.required],
+      userName: ['', Validators.required],
+      userPassword: ['', Validators.required],
+      userConfirmPassword: ['', Validators.required]
+
+    });
   }
 
   login() {
-    console.log(this.myForm.value);
-    this.router.navigate(['/home']);
+    this.user = {
+      emailId: this.myForm.value.userEmail,
+      password: this.myForm.value.userPassword,
+    }
+    this.service.login(this.user).then((response) => {
+      console.log('Ui', response);
+    })
+    //this.router.navigate(['/home']);
   }
 
   reset() {
     this.myForm.reset();
+    this.registerForm.reset();
   }
 
+  signUp(){
+    if(this.registerForm.valid){
+      this.user = {
+        fullName: this.registerForm.value.userName,
+        emailId: this.registerForm.value.userEmail,
+        password: this.registerForm.value.userPassword,
+      }
+    }
+    console.log(this.user);
+    //this.router.navigate(['/home']);
+  }
 }

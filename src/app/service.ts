@@ -1,4 +1,10 @@
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+@Injectable()
 export class service{
+  constructor(public http: HttpClient){
+
+  }
      accountDetails = [
         { bankName: 'HDFC Bank', accountType: 'Savings', balance: '$ 4,000', location: 'Nungambakkam, Chennai' },
         { bankName: 'ICICI Bank', accountType: 'Salary', balance: '$ 8,000', location: 'Velachery, Chennai' },
@@ -44,5 +50,13 @@ export class service{
 
       public getStatements() {
           return this.statements;
+      }
+      public login(user: any) {
+        const headers = new HttpHeaders();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('http://192.168.1.4:8080/bankService/bank/login', user,
+        { headers: headers }).toPromise().then((response) => {
+          console.log(response);
+        })
       }
 }

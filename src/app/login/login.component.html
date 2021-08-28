@@ -1,28 +1,66 @@
 <div style="background-color: #e1e1e1; width: 100%; height: 100%">
   <div class="login-wrapper">
     <mat-card>
-      <mat-card-title style="justify-content: center; align-items: center"
-        >Login</mat-card-title
-      >
-      <form class="login-form" [formGroup]="myForm">
-        <mat-form-field appearance="fill">
-          <mat-label>User Name</mat-label>
-          <input matInput formControlName="userEmail" type="email" />
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Password</mat-label>
-          <input matInput type="password" formControlName="userPassword" />
-        </mat-form-field>
-        <button
-          type="button"
-          mat-raised-button
-          color="primary"
-          (click)="login()"
-        >
-          Login
-        </button>
-        <button type="button" mat-raised-button (click)="reset()">Reset</button>
-      </form>
+      <mat-tab-group>
+        <mat-tab label="Login">
+          <form class="login-form" [formGroup]="myForm">
+            <mat-form-field appearance="fill">
+              <mat-label>User Name</mat-label>
+              <input matInput formControlName="userEmail" type="email" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="userPassword" />
+            </mat-form-field>
+            <button
+              type="button"
+              mat-raised-button
+              color="primary"
+              (click)="login()"
+            >
+              Login
+            </button>
+            <button type="button" mat-raised-button (click)="reset()">
+              Reset
+            </button>
+          </form>
+        </mat-tab>
+        <mat-tab label="New Register">
+          <form class="login-form" [formGroup]="registerForm">
+            <mat-form-field appearance="fill">
+              <mat-label>User email</mat-label>
+              <input matInput formControlName="userEmail" type="email" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Full Name</mat-label>
+              <input matInput formControlName="userName" type="text" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="userPassword" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Confirm Password</mat-label>
+              <input
+                matInput
+                type="password"
+                formControlName="userConfirmPassword"
+              />
+            </mat-form-field>
+            <button
+              type="button"
+              mat-raised-button
+              color="primary"
+              (click)="signUp()"
+            >
+              Sign Up
+            </button>
+            <button type="button" mat-raised-button (click)="reset()">
+              Reset
+            </button>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
     </mat-card>
   </div>
 </div>

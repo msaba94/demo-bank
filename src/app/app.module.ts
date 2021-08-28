@@ -23,6 +23,9 @@ import { service } from './service';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,9 +45,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     MatCardModule, MatGridListModule, MatButtonModule, MatTooltipModule, MatTableModule,
-     MatFormFieldModule, MatSelectModule,MatInputModule, FormsModule, ReactiveFormsModule
+     MatFormFieldModule, MatSelectModule,MatInputModule, FormsModule, ReactiveFormsModule,MatTabsModule,HttpClientModule
   ],
-  providers: [service],
+  providers: [service, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
