@@ -44,21 +44,22 @@ export class LoginComponent implements OnInit {
       emailId: this.myForm.value.userEmail,
       password: this.myForm.value.userPassword,
     }
-    if(this.myForm.valid){
-    this.service.login(this.user).then(data => {
-      console.log(data);
-      if (data.success){
-        this.router.navigate(['/home']);
-      }else{
-        this.showLogin=data.message;
-        this.IsLogin=true;
-        this.enterAny=false;
-      }
-    });
-  }else{
-    this.enterAny=true;
-    this.IsLogin=false;
-  }
+    this.router.navigate(['/home']);
+    // if(this.myForm.valid){
+    //   this.service.login(this.user).then(data => {
+    //     console.log(data);
+    //     if (data.success){
+    //       this.router.navigate(['/home']);
+    //     }else{
+    //       this.showLogin=data.message;
+    //       this.IsLogin=true;
+    //       this.enterAny=false;
+    //     }
+    //   });
+    // }else{
+    //   this.enterAny=true;
+    //   this.IsLogin=false;
+    // }
   }
 
   reset() {
@@ -73,17 +74,17 @@ export class LoginComponent implements OnInit {
         emailId: this.registerForm.value.userEmail,
         password: this.registerForm.value.userPassword,
       }
-      this.service.register(this.user).then(data => {
-        console.log(data);
-        if(data.success){
-          this.IsShowSign=true;
-          this.IsShowSign2= false;
-        }else{
-          this.showLogin2=data.message;
-          this.IsShowSign2= true;
-          this.IsShowSign=false;
-        }
-      })
+      // this.service.register(this.user).then(data => {
+      //   console.log(data);
+      //   if(data.success){
+      //     this.IsShowSign=true;
+      //     this.IsShowSign2= false;
+      //   }else{
+      //     this.showLogin2=data.message;
+      //     this.IsShowSign2= true;
+      //     this.IsShowSign=false;
+      //   }
+      // })
     } 
   }
   checkConfirmPassword(){
