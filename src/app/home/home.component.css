@@ -52,8 +52,15 @@
   font-size: 16px;
 }
 
-.holder-name{
+.holder-name {
   width: auto;
   color: #fff;
   font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.risk-text {
+  color: red;
+  font-size: 16px;
+  font-style: italic;
 }
